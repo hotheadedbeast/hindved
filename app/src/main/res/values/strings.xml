@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Hind Ved</string>
     <string name="dashboard">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="about">About</string>
+    <string name="navigation_drawer">Navigation_drawer</string>
 </resources>
