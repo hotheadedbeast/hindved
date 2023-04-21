@@ -6,24 +6,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
     tools:context=".MainActivity">
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"  >
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
         android:background="@color/design_default_color_primary"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/frame"></FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 <com.google.android.material.navigation.NavigationView
+    android:id="@+id/navigationView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:headerLayout="@layout/drawer_layout"
+    android:layout_marginTop="58dp"
     app:menu="@menu/menu_drawer"
     android:layout_gravity="start"/>
 

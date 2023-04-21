@@ -5,4 +5,6 @@
     <string name="favorites">Favorites</string>
     <string name="about">About</string>
     <string name="navigation_drawer">Navigation_drawer</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
 </resources>
