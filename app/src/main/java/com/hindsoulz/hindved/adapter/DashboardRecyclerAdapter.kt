@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.hindsoulz.hindved.R
 import com.hindsoulz.hindved.activity.MainActivity
@@ -27,7 +29,10 @@ class DashboardRecyclerAdapter(val context: Context, val itemList: ArrayList<Boo
         holder.txtBookPrice.text = book.bookCost
         holder.txtBookRating.text = book.bookRating
         holder.imgBookImage.setImageResource(book.bookImage)
-
+        holder.layoutID.setOnClickListener {
+            Toast.makeText(context, "Clicked on ${holder.txtBookName.text}", Toast.LENGTH_SHORT)
+                .show()
+        }
     }
 
     override fun getItemCount(): Int {
@@ -39,5 +44,6 @@ class DashboardRecyclerAdapter(val context: Context, val itemList: ArrayList<Boo
         val txtBookPrice: TextView = view.findViewById(R.id.txtBookPrice)
         val txtBookRating: TextView = view.findViewById(R.id.txtBookRating)
         val imgBookImage: ImageView = view.findViewById(R.id.imgBookImage)
+        val layoutID: LinearLayout = view.findViewById(R.id.layoutID)
     }
 }
